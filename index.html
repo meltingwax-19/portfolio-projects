@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gad E. — Frontend Developer</title>
+  <meta name="description"
+    content="Frontend developer building responsive, mobile-first websites. View live demos and source code." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gad E. — Frontend Developer" />
+  <meta property="og:description" content="Responsive websites in 48–72 hours. Live demos + source code." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>Gad E.</h1>
+        <p class="tagline">Frontend Developer — Responsive websites in 48–72 hours</p>
+      </div>
+      <nav class="top-links">
+        <a href="resume.html" class="btn ghost small" target="_blank" rel="noopener">View Resume</a>
+        <a href="assets/resume.pdf" class="btn ghost small" download>Download PDF</a>
+        <button id="themeToggle" class="btn ghost small" aria-label="Toggle theme" title="Toggle light/dark">🌙</button>
+        <a href="https://github.com/meltingwax-19" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="cta" href="https://www.fiverr.com/" target="_blank" rel="noopener">Hire me on Fiverr</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <main>
+    <section class="container">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <!-- Project 1: Exotic Nija Menu -->
+        <article class="card">
+          <img src="assets/exotic-nija-cover.jpg" alt="Exotic Nija Menu — desktop and mobile preview" class="thumb" />
+          <div class="card-body">
+            <h3>Exotic Nija Menu — Responsive Restaurant Website</h3>
+            <p class="muted">
+              HTML/CSS/JS. Mobile-first layout, optimized hero images, categorized menus, and performance tweaks.
+            </p>
+            <div class="actions">
+              <a class="btn" href="https://meltingwax-19.github.io/exotic-nija-menu/" target="_blank"
+                rel="noopener">Live Demo</a>
+              <a class="btn ghost" href="https://github.com/meltingwax-19/exotic-nija-menu" target="_blank"
+                rel="noopener">Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Responsive Navbar Fix -->
+        <article class="card">
+          <img src="assets/navbar-before-after.png" alt="Responsive Navbar Fix — before and after preview"
+            class="thumb" />
+          <div class="card-body">
+            <h3>Responsive Navbar Fix — Before/After Demo</h3>
+            <p class="muted">
+              Transformed a broken, overlapping navbar into a clean, mobile-first layout. Consistent grid using
+              <code>aspect-ratio</code>.
+            </p>
+            <div class="actions">
+              <a class="btn" href="https://meltingwax-19.github.io/responsive-navbar-fix/" target="_blank"
+                rel="noopener">Live Demo</a>
+              <a class="btn ghost" href="https://github.com/meltingwax-19/responsive-navbar-fix" target="_blank"
+                rel="noopener">Source Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About / Services -->
+    <section class="container about">
+      <h2>About & Services</h2>
+      <p>
+        I build fast, responsive websites with clean HTML, CSS, and JavaScript. I focus on mobile-first layouts,
+        performance, and clear communication.
+      </p>
+      <ul class="bullets">
+        <li>Landing pages (48–72 hour turnaround)</li>
+        <li>Bug fixes & responsive clean-ups (navbars, grids, images)</li>
+        <li>Ongoing support & maintenance</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="container contact">
+      <h2>Contact</h2>
+      <p class="muted">Ready to start or have a question? Reach out below.</p>
+      <!-- <div class="actions">
+        <a class="btn" href="mailto:gad.enwe.dev@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://wa.me/2347062809998" target="_blank" rel="noopener">WhatsApp</a>
+      </div> -->
+      <div class="actions">
+        <a class="btn"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=gad.enwe.dev@gmail.com&su=Website%20Development%20Inquiry&body=Hello%20Gad,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20website%20development%20project.%20Please%20let%20me%20know%20when%20you're%20available.%0A%0AThank%20you."
+          target="_blank" rel="noopener">
+          Email me
+        </a>
+        <a class="btn ghost"
+          href="https://wa.me/2347062809998?text=Hello%20Gad,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20website%20development%20project.%20Please%20let%20me%20know%20when%20you're%20available."
+          target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="y"></span> Gad E. — Frontend Developer</small>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // theme toggle with persistence
+    const toggleBtn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme'); // 'dark' | 'light'
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    toggleBtn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌞' : '🌙';
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'light' ? '🌞' : '🌙';
+    });
+  </script>
+</body>
+</html>

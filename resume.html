@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gad E. — Resume</title>
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #555;
+      --accent: #0ea5e9;
+      --border: #ddd;
+      --bg: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #eaeaea;
+        --muted: #b9c0c7;
+        --accent: #22c55e;
+        --border: #334155;
+        --bg: #0b0c0f;
+      }
+    }
+
+    html,
+    body {
+      background: var(--bg)
+    }
+
+    body {
+      font: 14px/1.5 "Inter", system-ui, Segoe UI, Roboto, Arial;
+      color: var(--ink);
+      margin: 0;
+      padding: 0
+    }
+
+    .sheet {
+      max-width: 850px;
+      margin: 24px auto;
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .sheet {
+        background: #0f1218
+      }
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 6px
+    }
+
+    h1 {
+      font-size: 26px
+    }
+
+    h2 {
+      font-size: 14px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 12px
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 2px 0 0
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--border)
+    }
+
+    .contact a:hover {
+      color: var(--accent)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 22px
+    }
+
+    .section {
+      margin: 14px 0
+    }
+
+    .item {
+      margin: 8px 0
+    }
+
+    ul.tight {
+      margin: 6px 0 0 18px
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      margin: 3px 6px 0 0
+    }
+
+    .btnbar {
+      position: sticky;
+      top: 0;
+      background: transparent;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 12px 0;
+      max-width: 850px;
+      margin: 0 auto
+    }
+
+    .btn {
+      font: 12px/1 system-ui;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      cursor: pointer
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .btn {
+        background: #0f1218;
+        color: #eaeaea
+      }
+    }
+
+    /* PRINT */
+    @page {
+      size: A4;
+      margin: 14mm
+    }
+
+    @media print {
+      body {
+        background: #fff
+      }
+
+      .sheet {
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        padding: 0
+      }
+
+      .btnbar {
+        display: none
+      }
+
+      .contact a {
+        border: 0
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Buttons (hidden in print) -->
+  <div class="btnbar">
+    <button class="btn" onclick="window.print()">Print / Save PDF</button>
+    <a class="btn" href="index.html">Back to Portfolio</a>
+  </div>
+
+  <main class="sheet" role="document" aria-label="Resume">
+    <header class="top">
+      <div>
+        <h1>Gad E.</h1>
+        <p class="sub">Frontend Developer — HTML • CSS • JavaScript • Responsive Web</p>
+      </div>
+      <div class="contact" aria-label="Contact">
+        <div><a href="mailto:your.email@example.com">your.email@example.com</a></div>
+        <div><a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div><a href="https://github.com/meltingwax-19" target="_blank" rel="noopener">github.com/meltingwax-19</a>
+        </div>
+        <div><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></div>
+        <div><a href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr</a></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Summary</h2>
+      <p>I build fast, responsive websites with clean HTML, CSS, and JavaScript. I focus on mobile-first layouts,
+        accessibility, and performance. Available for quick turnarounds (48–72 hours) and ongoing support.</p>
+    </section>
+
+    <div class="grid">
+      <section>
+        <div class="section">
+          <h2>Projects</h2>
+
+          <div class="item">
+            <strong>Exotic Nija Menu — Responsive Restaurant Website</strong><br />
+            <em>HTML, CSS, JavaScript</em>
+            <ul class="tight">
+              <li>Mobile-first multi-page layout with optimized hero images.</li>
+              <li>Categorized menus; semantic markup; improved performance.</li>
+              <li><a href="https://meltingwax-19.github.io/exotic-nija-menu/" target="_blank" rel="noopener">Live
+                  Demo</a> • <a href="https://github.com/meltingwax-19/exotic-nija-menu" target="_blank"
+                  rel="noopener">Source</a></li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <strong>Responsive Navbar Fix — Before/After Demo</strong><br />
+            <em>HTML, CSS, JavaScript</em>
+            <ul class="tight">
+              <li>Converted overlapping, fixed-width navbar into clean, flexible header.</li>
+              <li>Consistent card grid via <code>aspect-ratio</code>; improved cross-device UX.</li>
+              <li><a href="https://meltingwax-19.github.io/responsive-navbar-fix/" target="_blank" rel="noopener">Live
+                  Demo</a> • <a href="https://github.com/meltingwax-19/responsive-navbar-fix" target="_blank"
+                  rel="noopener">Source</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Experience</h2>
+          <div class="item">
+            <strong>Freelance Frontend Developer</strong> — Self-employed (2025–Present)
+            <ul class="tight">
+              <li>Delivered responsive landing pages and small business sites.</li>
+              <li>Fixed layout issues (navbars, grids, images) and optimized performance.</li>
+              <li>Clear communication, on-time delivery, and maintainable code.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="section">
+          <h2>Skills</h2>
+          <div>
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">Git/GitHub</span>
+            <span class="pill">Performance</span>
+            <span class="pill">Accessibility</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Education</h2>
+          <div class="item">
+            <strong>Self-directed Study</strong><br />
+            Full-stack web development fundamentals and projects.
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Services</h2>
+          <ul class="tight">
+            <li>Landing pages (48–72h)</li>
+            <li>Bug fixes & responsive clean-ups</li>
+            <li>Ongoing support & maintenance</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

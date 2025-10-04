@@ -1,0 +1,203 @@
+/* ---------- THEME TOKENS ---------- */
+:root {
+  /* dark (default) */
+  --bg: #0b0c0f;
+  --card: #151822;
+  --stroke: #242a36;
+  --text: #e9f1ff;
+  --muted: #9fb3c8;
+  --accent: #22c55e;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --stroke: #d8dbe2;
+  --text: #0b0c0f;
+  --muted: #5a6a7a;
+  --accent: #0ea5e9;
+}
+
+/* ---------- BASE ---------- */
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0
+}
+
+body {
+  font: 16px/1.6 system-ui, Segoe UI, Roboto, Inter, Arial;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 8px
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  background: color-mix(in oklab, var(--bg) 92%, black 8%);
+  border-bottom: 1px solid var(--stroke)
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px
+}
+
+h1 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem)
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: .95rem
+}
+
+.top-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.top-links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px
+}
+
+.top-links a:hover {
+  background: color-mix(in oklab, var(--card) 80%, var(--bg) 20%)
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #06120a;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid color-mix(in oklab, var(--accent) 70%, black 30%)
+}
+
+.btn:hover {
+  filter: brightness(0.95)
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--stroke)
+}
+
+.btn.ghost:hover {
+  background: color-mix(in oklab, var(--card) 85%, var(--bg) 15%)
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 10px
+}
+
+.top-links .cta {
+  background: var(--accent);
+  color: #06120a
+}
+
+.top-links .cta:hover {
+  filter: brightness(0.95)
+}
+
+/* ---------- PROJECTS GRID ---------- */
+h2 {
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  margin: 10px 0 16px
+}
+
+.muted {
+  color: var(--muted)
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: linear-gradient(135deg, #1ea672, #0ea5e9)
+}
+
+.card-body {
+  padding: 16px
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px
+}
+
+/* ---------- ABOUT ---------- */
+.about .bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--text)
+}
+
+.about .bullets li {
+  margin: 6px 0
+}
+
+/* ---------- CONTACT ---------- */
+.contact .actions {
+  margin-top: 6px
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  border-top: 1px solid var(--stroke);
+  background: color-mix(in oklab, var(--bg) 92%, black 8%)
+}
+
+.site-footer small {
+  color: var(--muted)
+}
